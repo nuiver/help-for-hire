@@ -6,9 +6,42 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <div class="topleft">
+          <a href="index.html"><h1>Help for hire</h1></a>
+        </div>
+        <div class="topright">
+          <p>Placeholder login area</p>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <ul class="nav-bar">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="*">About us<a>
+        </li>
+        <li>
+          <a href="*">Contact<a>
+        </li>
+    </nav>
+
+    <div class="maincontent">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <div class="container">
+
+      </div>
+    </footer>
   </body>
 </html>

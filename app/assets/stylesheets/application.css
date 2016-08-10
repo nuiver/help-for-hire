@@ -1,15 +1,97 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/*Used colors:
+#D8D8D8 / grey background
+#065A6B / blue
+#07282F / dark blue
+#9BB7BC / light blue
+*/
+
+body {
+  background-color: #D8D8D8;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  font-weight: 500;
+}
+
+body a{
+  color: #065A6B;
+}
+
+body a:hover {
+  color: #07282F;
+}
+
+/* typo */
+
+h1 {
+  margin: 0;
+}
+
+/* header */
+
+header {
+  background-color: #065A6B;
+  margin: 0;
+}
+
+header .container {
+  height: 120px;
+  padding-left: 20px;
+  padding-top: 0px;
+  display: flex;
+}
+.topleft {
+  flex: 4;
+  float: left;
+}
+.topleft h1 {
+  margin-top: 30px;
+  font-size: 53px;
+  font-weight: 500;
+}
+.topleft a {
+  margin-top: 30px;
+  font-size: 53px;
+  color: #9BB7BC;
+  text-decoration: none;
+}
+.topright {
+  flex: 1;
+  float: left;
+  color: #9BB7BC;
+  font-style: italic;
+}
+
+/* nav */
+
+nav {
+  background-color: #07282F;
+}
+nav a{
+  color: #ffffff;
+  font-weight: 300;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #9BB7BC;
+}
+nav ul {
+  margin: 0;
+  padding: 10px 20px;
+  display: flex;
+}
+nav li {
+  list-style-type: none;
+  flex: 1;
+}
+
+/* main content */
+
+.maincontent {
+  padding: 10px 20px;
+}
+
+/* footer */
+footer .container {
+  height: 200px;
+  background-color: #07282F;
+}
