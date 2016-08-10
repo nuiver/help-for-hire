@@ -21,24 +21,17 @@
     <%= f.text_area :description %>
   </div>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.datetime_select :date %>
-  </div>
+  <h3> Available: </h3>
+  <%= f.label "begin date" %>
+  <%= f.date_field :begin_date %>
 
+  <%= f.label "end date" %>
+  <%= f.date_field :end_date %>
+  <br>
+  <br>
   <div class="field">
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= f.label :zipcode %>
-    <%= f.text_field :zipcode %>
-  </div>
-
-  <div class="field">
-    <%= f.label :city %>
-    <%= f.text_field :city %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
   </div>
 
   <div class="field">
@@ -54,4 +47,7 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <!-- <%= f.collection_select :task_id, Task.order(:category),:id, :name, include_blank: true %> -->
+
 <% end %>
