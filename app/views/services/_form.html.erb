@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+
+<body>
+
 <%= form_for(service) do |f| %>
   <% if service.errors.any? %>
     <div id="error_explanation">
@@ -48,6 +56,6 @@
     <%= f.submit %>
   </div>
 
-  <!-- <%= f.collection_select :task_id, Task.order(:category),:id, :name, include_blank: true %> -->
-
 <% end %>
+</body>
+</html>
