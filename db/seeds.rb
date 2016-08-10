@@ -35,8 +35,8 @@ Service.create ( {
   begin_date: "2016-08-27 00:00:00 +0200",
   end_date: "2016-09-10 00:00:00 +0200",
   location: "Hoorn",
-  price: 100
-  task: [ vacuuming, window_cleaning, mopping, dusting, sanitary ]
+  price: 100.00,
+  tasks: [ vacuuming, window_cleaning, mopping, dusting, sanitary ]
 } )
 Service.create ( {
   name: "Gardening help",
@@ -44,8 +44,8 @@ Service.create ( {
   begin_date: "2016-09-20 00:00:00 +0200",
   end_date: "2016-09-28 00:00:00 +0200",
   location: "Amsterdam",
-  price: 200
-  task: [ lawn_mowing, hedge_trimming, fertilizing, weeding, paving ]
+  price: 200.00,
+  tasks: [ lawn_mowing, hedge_trimming, fertilizing, weeding, paving ]
 } )
 Service.create ( {
   name: "Computerguy",
@@ -53,8 +53,8 @@ Service.create ( {
   begin_date: "2016-09-01 00:00:00 +0200",
   end_date:"2016-09-02 00:00:00 +0200",
   location: "Alkmaar",
-  price: 100
-  task: [ computer_help ]
+  price: 100.00,
+  tasks: [ computer_help ]
 } )
 
 User.create ( {name: "Dana", email: "dana@gmail.com", username: "dana", password: "xaxaxa"} )
