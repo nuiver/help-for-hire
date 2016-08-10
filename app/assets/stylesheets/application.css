@@ -37,9 +37,10 @@ header .container {
   height: 120px;
   padding-left: 20px;
   padding-top: 0px;
+  display: flex;
 }
 .topleft {
-  width: 800px;
+  flex: 4;
   float: left;
 }
 .topleft h1 {
@@ -54,8 +55,10 @@ header .container {
   text-decoration: none;
 }
 .topright {
+  flex: 1;
   float: left;
   color: #9BB7BC;
+  font-style: italic;
 }
 
 /* nav */
@@ -65,14 +68,30 @@ nav {
 }
 nav a{
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 300;
   text-decoration: none;
+}
+nav a:hover {
+  color: #9BB7BC;
 }
 nav ul {
   margin: 0;
-  padding: 10px 20px
+  padding: 10px 20px;
+  display: flex;
 }
 nav li {
   list-style-type: none;
-  text-transform: uppercase;
+  flex: 1;
+}
+
+/* main content */
+
+.maincontent {
+  padding: 10px 20px;
+}
+
+/* footer */
+footer .container {
+  height: 200px;
+  background-color: #07282F;
 }
