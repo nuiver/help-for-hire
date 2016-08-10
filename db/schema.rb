@@ -26,10 +26,9 @@ ActiveRecord::Schema.define(version: 20160810145222) do
   create_table "services", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "date"
-    t.string   "address"
-    t.string   "zipcode"
-    t.string   "city"
+    t.datetime "begin_date"
+    t.datetime "end_date"
+    t.string   "location"
     t.string   "category"
     t.float    "price"
     t.datetime "created_at",  null: false
