@@ -38,6 +38,8 @@
     <%= f.text_field :price %>
   </div>
 
+  <%= f.label :category %>
+  <%= f.select :category, [['IT'],['Gardening'],['Cleaning'],['Carpentry'], ['Electricity']] %>
 
   <div class="field">
     <%= f.label "Gardening" %>

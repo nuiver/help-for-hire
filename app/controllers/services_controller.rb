@@ -12,6 +12,9 @@ class ServicesController < ApplicationController
   def show
   end
 
+  def gardening
+  end
+
   # GET /services/new
   def new
     @service = Service.new
@@ -70,7 +73,7 @@ class ServicesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def service_params
-    params.require(:service).permit(:name, :description, :begin_date, :end_date, :location, :price, task_ids:[])
+    params.require(:service).permit(:name, :description, :begin_date, :end_date, :location, :price, :category, task_ids:[])
   end
 
 end
