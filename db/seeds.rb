@@ -29,7 +29,8 @@ dana = User.create( { email: "dana@emailadres.com", password: "abcd1234" })
 jacob = User.create( { email: "jacob@emailadres.com", password: "abcd1234" })
 wouter = User.create( { email: "wouter@emailadres.com", password: "abcd1234" })
 monique = User.create( { email: "monique@emailadres.com", password: "abcd1234" })
-
+michael = User.create( {email: "michael@emailadres.com", password: "abcd1234"})
+henk = User.create( {email: "henk@emailadres.com", password: "abcd1234"})
 
 service1 = Service.create ( {
   name: "Cleaning",
@@ -38,6 +39,7 @@ service1 = Service.create ( {
   end_date: "2016-09-10 00:00:00 +0200",
   location: "Hoorn",
   price: 100.00,
+  category: "Cleaning",
   tasks: [ vacuuming, window_cleaning, mopping, dusting, sanitary ],
   user: dana
 } )
@@ -48,18 +50,43 @@ service2 = Service.create ( {
   end_date: "2016-09-28 00:00:00 +0200",
   location: "Amsterdam",
   price: 200.00,
+  category: "Gardening",
   tasks: [ lawn_mowing, hedge_trimming, fertilizing, weeding, paving ],
   user: jacob
 } )
 service3 = Service.create ( {
-  name: "Computerguy",
-  description: "Computer problems? I'm your guy to contact!",
+  name: "Computergirl",
+  description: "Computer problems? I'm your girl to contact!",
   begin_date: "2016-09-01 00:00:00 +0200",
   end_date:"2016-09-02 00:00:00 +0200",
   location: "Alkmaar",
   price: 100.00,
+  category: "IT",
   tasks: [ computer_help ],
   user: monique
+} )
+service4 = Service.create ( {
+  name: "Electricity fixer",
+  description: "I can fix anything",
+  begin_date: "2016-09-01 00:00:00 +0200",
+  end_date:"2016-09-02 00:00:00 +0200",
+  location: "Amsterdam",
+  price: 75.00,
+  category: "Electricity",
+  tasks: [ changing_light_bulb ],
+  user: michael
+} )
+
+service5 = Service.create ( {
+  name: "Your handyman",
+  description: "Everything in the house I can fix",
+  begin_date: "2016-09-01 00:00:00 +0200",
+  end_date:"2016-09-02 00:00:00 +0200",
+  location: "Amsterdam",
+  price: 30.00,
+  category: "Carpentry",
+  tasks: [ house_repair ],
+  user: henk
 } )
 
 
