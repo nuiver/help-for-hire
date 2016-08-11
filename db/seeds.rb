@@ -21,35 +21,57 @@ shower_installation     = Task.create ( { name: "Shower installation", category:
 kitchen_installation    = Task.create ( { name: "Kitchen installation", category: "Plumbing" } )
 computer_help           = Task.create ( { name: "Computer help", category: "IT" } )
 
+Booking.delete_all
+Service.delete_all
+User.delete_all
+
 dana = User.create( { email: "dana@emailadres.com", password: "abcd1234" })
 jacob = User.create( { email: "jacob@emailadres.com", password: "abcd1234" })
 wouter = User.create( { email: "wouter@emailadres.com", password: "abcd1234" })
 monique = User.create( { email: "monique@emailadres.com", password: "abcd1234" })
 
-Service.create ( {
+
+service1 = Service.create ( {
   name: "Cleaning",
   description: "I'm available for cleaning basically anything! I have helped out my family in needs for years and know the perfect ways how to clean best",
   begin_date: "2016-08-27 00:00:00 +0200",
   end_date: "2016-09-10 00:00:00 +0200",
   location: "Hoorn",
   price: 100.00,
-  tasks: [ vacuuming, window_cleaning, mopping, dusting, sanitary ]
+  tasks: [ vacuuming, window_cleaning, mopping, dusting, sanitary ],
+  user: dana
 } )
-Service.create ( {
+service2 = Service.create ( {
   name: "Gardening help",
   description: "I can do your gardening for you! I have my own company for 20 years. No matter how big or small your garden is, I can make it beautifull",
   begin_date: "2016-09-20 00:00:00 +0200",
   end_date: "2016-09-28 00:00:00 +0200",
   location: "Amsterdam",
   price: 200.00,
-  tasks: [ lawn_mowing, hedge_trimming, fertilizing, weeding, paving ]
+  tasks: [ lawn_mowing, hedge_trimming, fertilizing, weeding, paving ],
+  user: jacob
 } )
-Service.create ( {
+service3 = Service.create ( {
   name: "Computerguy",
   description: "Computer problems? I'm your guy to contact!",
   begin_date: "2016-09-01 00:00:00 +0200",
   end_date:"2016-09-02 00:00:00 +0200",
   location: "Alkmaar",
   price: 100.00,
-  tasks: [ computer_help ]
+  tasks: [ computer_help ],
+  user: monique
 } )
+
+
+booking1 = Booking.create ( {
+  begin_date: "2016-09-01 00:00:00 +0200",
+  end_date: "2016-09-02 00:00:00 +0200",
+  service: service1,
+  user: wouter
+  })
+booking2 = Booking.create ( {
+  begin_date: "2016-08-28 00:00:00 +0200",
+  end_date: "2016-08-29 00:00:00 +0200",
+  service: service3,
+  user: wouter
+  })
