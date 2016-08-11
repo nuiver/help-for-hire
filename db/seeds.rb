@@ -56,8 +56,3 @@ Service.create ( {
   price: 100.00,
   tasks: [ computer_help ]
 } )
-
-User.create ( {name: "Dana", email: "dana@gmail.com", username: "dana", password: "xaxaxa"} )
-User.create ( {name: "Jacob", email: "Jacob@gmail.com", username: "jacob", password: "babababa"})
-User.create ( {name: "Wouter", email: "Wouter@gmail.com", username: "wouter", password: "bababaxba"})
-User.create ( {name: "Monique", email: "Monique@gmail.com", username: "monique", password: "babdababa"})
