@@ -21,14 +21,12 @@
     <%= f.text_area :description %>
   </div>
 
-  <h3> Available: </h3>
-  <%= f.label "begin date" %>
-  <%= f.date_field :begin_date %>
+  <div class="field">
+    <%= f.label "Available:" %>
+    <%= f.date_field :begin_date %>
+    <%= f.date_field :end_date %>
+  </div>
 
-  <%= f.label "end date" %>
-  <%= f.date_field :end_date %>
-  <br>
-  <br>
   <div class="field">
     <%= f.label :location %>
     <%= f.text_field :location %>
@@ -39,10 +37,18 @@
     <%= f.text_field :price %>
   </div>
 
+  <div class="field">
+    <%= f.label "Tasks" %>
+    <%= f.collection_check_boxes :task_ids, Task.order(:category), :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
-
-  <!-- <%= f.collection_select :task_id, Task.order(:category),:id, :name, include_blank: true %> -->
-
+  
 <% end %>
