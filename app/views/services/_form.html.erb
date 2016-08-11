@@ -22,8 +22,9 @@
   </div>
 
   <div class="field">
-    <%= f.label "Available:" %>
+    <%= f.label "Available from:" %>
     <%= f.date_field :begin_date %>
+      <%= f.label "to:" %>
     <%= f.date_field :end_date %>
   </div>
 
@@ -37,9 +38,60 @@
     <%= f.text_field :price %>
   </div>
 
+
   <div class="field">
-    <%= f.label "Tasks" %>
-    <%= f.collection_check_boxes :task_ids, Task.order(:category), :id, :name do |b| %>
+    <%= f.label "Gardening" %>
+    <%= f.collection_check_boxes :task_ids, Task.where(category: "Gardening"), :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Electricity" %>
+    <%= f.collection_check_boxes :task_ids, Task.where(category: "Electricity"), :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Cleaning" %>
+    <%= f.collection_check_boxes :task_ids, Task.where(category: "Cleaning"), :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Carpentry" %>
+    <%= f.collection_check_boxes :task_ids, Task.where(category: "Carpentry"), :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Plumbing" %>
+    <%= f.collection_check_boxes :task_ids, Task.where(category: "Plumbing"), :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label "IT" %>
+    <%= f.collection_check_boxes :task_ids, Task.where(category: "IT"), :id, :name do |b| %>
       <div class="collection-check-box">
         <%= b.check_box %>
         <%= b.label %>
@@ -50,5 +102,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-  
+
 <% end %>
