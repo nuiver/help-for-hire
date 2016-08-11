@@ -27,7 +27,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @service.price %>
+  <%= number_to_currency @service.price, unit: '€ ' %>
 </p>
 
 <p>
