@@ -11,34 +11,30 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @service.date %>
+  <strong>Begin date:</strong>
+  <%= @service.begin_date %>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @service.address %>
+  <strong>End date:</strong>
+  <%= @service.end_date %>
 </p>
 
 <p>
-  <strong>Zipcode:</strong>
-  <%= @service.zipcode %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @service.city %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @service.category %>
+  <strong>Location:</strong>
+  <%= @service.location %>
 </p>
 
 <p>
   <strong>Price:</strong>
   <%= @service.price %>
 </p>
+
+<p>
+  <strong>Tasks:</strong>
+  <%= @service.list_of_tasks %>
+</p>
+
 
 <%= link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>
