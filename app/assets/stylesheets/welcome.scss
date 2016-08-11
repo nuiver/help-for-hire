@@ -1,0 +1,23 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.main_help {
+  display: flex;
+}
+
+.help_me {
+  flex: 1;
+  
+}
+
+.give_help {
+  flex: 1;
+}
+
+.welcome {
+  font-size: 40px;
+  padding: 60px;
+  text-align: center;
+}
