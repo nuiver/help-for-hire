@@ -1,6 +1,7 @@
 class Service < ApplicationRecord
   has_and_belongs_to_many :tasks
   has_many :bookings
+  belongs_to :user
 
   def list_of_tasks
     task_names = []
