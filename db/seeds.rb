@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 lawn_mowing             = Task.create ( { name: "Lawn Mowing", category: "Gardening" } )
 hedge_trimming          = Task.create ( { name: "Hedge Trimming", category: "Gardening" } )
 fertilizing             = Task.create ( { name: "Fertilizing", category: "Gardening" } )
@@ -28,6 +20,11 @@ installing_new_pipes    = Task.create ( { name: "Installing new pipes", category
 shower_installation     = Task.create ( { name: "Shower installation", category: "Plumbing" } )
 kitchen_installation    = Task.create ( { name: "Kitchen installation", category: "Plumbing" } )
 computer_help           = Task.create ( { name: "Computer help", category: "IT" } )
+
+dana = User.create( { email: "dana@emailadres.com", password: "abcd1234" })
+jacob = User.create( { email: "jacob@emailadres.com", password: "abcd1234" })
+wouter = User.create( { email: "wouter@emailadres.com", password: "abcd1234" })
+monique = User.create( { email: "monique@emailadres.com", password: "abcd1234" })
 
 Service.create ( {
   name: "Cleaning",
