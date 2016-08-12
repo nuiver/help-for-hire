@@ -26,7 +26,7 @@
     <%= f.text_field :total_price %>
   </div>
 
-<% if @service |= nil %>
+<% if defined? @service %>
   <div class="field">
     <%= f.hidden_field :service_id, :value => @service.id %>
   </div>
