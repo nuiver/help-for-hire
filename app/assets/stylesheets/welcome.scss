@@ -2,22 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.main_page {
+  background-image: url(http://lifecoaching.debramay.com/wp-content/uploads/2013/08/helping-hikers.jpg);
+  background-size: cover;
+  -webkit-filter: grayscale(50%);
+}
+
 
 .main_help {
   display: flex;
+  margin-top: 200px;
 }
 
 .help_me {
   flex: 1;
-  
+  text-align: center;
+  font-size: 20px;
+  color: #07282F
 }
 
 .give_help {
   flex: 1;
+  text-align: center;
+  font-size: 20px;
 }
 
 .welcome {
-  font-size: 40px;
+  font-size: 30px;
   padding: 60px;
-  text-align: center;
+  text-align: right;
+}
+img {
+ width: 300px;
+}
+
+.main_img {
+  width: 400px;
+  align-self: center;
 }

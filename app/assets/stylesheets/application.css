@@ -11,9 +11,10 @@
 #9BB7BC / light blue
 */
 
+
 body {
-  background-color: #D8D8D8;
-  font-family: 'Raleway', sans-serif;
+  background-color: white;
+  font-family: 'Offside', cursive;
   margin: 0;
   font-size: 14px;
   font-weight: 500;
@@ -23,9 +24,7 @@ body a{
   color: #065A6B;
 }
 
-body a:hover {
-  color: #07282F;
-}
+/
 
 /* typo */
 
@@ -36,7 +35,7 @@ h1 {
 /* header */
 
 header {
-  background-color: #065A6B;
+  background-color: white;
   margin: 0;
 }
 
@@ -70,7 +69,7 @@ header .container {
   font-weight: 200;
 }
 .topright a {
-  color: #ffffff;
+  color: #9BB7BC;
   text-decoration: none;
 }
 .topright li {
@@ -84,7 +83,7 @@ header .container {
 /* nav */
 
 nav {
-  background-color: #07282F;
+  background-color: #9BB7BC;
 }
 nav a{
   color: #ffffff;
@@ -93,7 +92,7 @@ nav a{
   font-size: 14px;
 }
 nav a:hover {
-  color: #9BB7BC;
+  color: white;
 }
 nav a:active {
   color: #9BB7BC;
@@ -110,12 +109,17 @@ nav li {
 
 /* main content */
 
-.maincontent {
-  padding: 10px 20px;
-}
-
 /* footer */
 footer .container {
   height: 200px;
-  background-color: #07282F;
+  background-color: white;
+  color: #9BB7BC;
+  font-size: 30px;
+  padding-top: 20px;
+  text-align: right;
+  padding-right: 30px;
+  border-top: 10px solid #9BB7BC;
 }
+ ul {
+   list-style-type: none;
+ }
