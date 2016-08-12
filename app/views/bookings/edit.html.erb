@@ -1,6 +1,11 @@
 <h1>Editing Booking</h1>
 
-<%= render 'form', booking: @booking %>
+<% if can? :update, Booking %>
+  <%= render 'form', booking: @booking %>
 
-<%= link_to 'Show', @booking %> |
+  <%= link_to 'Show', @booking %> |
+<% else %>
+  <p>Sign in to edit a booking</p>
+<% end %>
+
 <%= link_to 'Back', bookings_path %>

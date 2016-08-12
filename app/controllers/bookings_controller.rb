@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   # GET /bookings.json
   def index
     @bookings = Booking.all
+    authorize! :read, @bookings
   end
 
   # GET /bookings/1
@@ -25,6 +26,7 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    authorize! :create, @booking
 
     respond_to do |format|
       if @booking.save
@@ -40,6 +42,8 @@ class BookingsController < ApplicationController
   # PATCH/PUT /bookings/1
   # PATCH/PUT /bookings/1.json
   def update
+    authorize! :update, @booking
+
     respond_to do |format|
       if @booking.update(booking_params)
         format.html { redirect_to @booking, notice: 'Booking was successfully updated.' }
@@ -54,6 +58,8 @@ class BookingsController < ApplicationController
   # DELETE /bookings/1
   # DELETE /bookings/1.json
   def destroy
+    authorize! :destroy, @booking
+
     @booking.destroy
     respond_to do |format|
       format.html { redirect_to bookings_url, notice: 'Booking was successfully destroyed.' }

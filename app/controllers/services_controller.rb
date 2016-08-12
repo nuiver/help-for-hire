@@ -5,6 +5,7 @@ class ServicesController < ApplicationController
   # GET /services.json
   def index
     @services = Service.all
+    authorize! :read, @services
   end
 
   # GET /services/1
@@ -29,6 +30,8 @@ class ServicesController < ApplicationController
   def create
     @service = Service.new(service_params)
     @service.user = current_user
+	authorize! :create, @service
+
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'Service was successfully created.' }
@@ -43,6 +46,8 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
+    authorize! :update, @service
+
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to @service, notice: 'Service was successfully updated.' }
@@ -57,6 +62,8 @@ class ServicesController < ApplicationController
   # DELETE /services/1
   # DELETE /services/1.json
   def destroy
+    authorize! :destroy, @service
+
     @service.destroy
     respond_to do |format|
       format.html { redirect_to services_url, notice: 'Service was successfully destroyed.' }
