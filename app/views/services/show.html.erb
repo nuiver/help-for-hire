@@ -15,12 +15,12 @@
 
 <p>
   <strong>Begin date:</strong>
-  <%= @service.begin_date %>
+  <%= @service.begin_date.strftime("%d %B %Y") %>
 </p>
 
 <p>
   <strong>End date:</strong>
-  <%= @service.end_date %>
+  <%= @service.end_date.strftime("%d %B %Y") %>
 </p>
 
 <p>

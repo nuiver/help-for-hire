@@ -20,6 +20,9 @@
   font-weight: bold;
   font-size: 20px;
 }
+.form-offer .h_task {
+  float: left;
+}
 .form_block {
   display: flex;
 }
@@ -31,4 +34,7 @@
 }
 .block_right {
   flex: 1;
+}
+.field_right {
+  width: 100%;
 }
