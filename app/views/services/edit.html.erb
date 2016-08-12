@@ -1,6 +1,11 @@
 <h1>Editing Service</h1>
 
-<%= render 'form', service: @service %>
+<% if can? :update, Service %>
+  <%= render 'form', service: @service %>
 
-<%= link_to 'Show', @service %> |
+  <%= link_to 'Show', @service %> |
+<% else %>
+  <p>Sign in to edit a service</p>
+<% end %>
+
 <%= link_to 'Back', services_path %>
