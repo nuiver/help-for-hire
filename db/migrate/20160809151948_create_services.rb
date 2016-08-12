@@ -7,7 +7,7 @@ class CreateServices < ActiveRecord::Migration[5.0]
       t.datetime :end_date
       t.string   :location
       t.string   :category
-      t.float    :price
+      t.decimal  :price
 
       t.timestamps
     end
