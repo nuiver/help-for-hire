@@ -12,7 +12,7 @@
 */
 
 body {
-  background-color: #D8D8D8;
+  background-color: white;
   font-family: 'Raleway', sans-serif;
   margin: 0;
   font-size: 14px;
@@ -36,7 +36,7 @@ h1 {
 /* header */
 
 header {
-  background-color: #065A6B;
+  background-color: white;
   margin: 0;
 }
 
@@ -84,7 +84,7 @@ header .container {
 /* nav */
 
 nav {
-  background-color: #07282F;
+  background-color: #9BB7BC;
 }
 nav a{
   color: #ffffff;
@@ -117,8 +117,8 @@ nav li {
 /* footer */
 footer .container {
   height: 200px;
-  background-color: #07282F;
-  color: white;
+  background-color: white;
+  color: #9BB7BC;
   font-size: 30px;
   padding-top: 20px;
   text-align: right;
