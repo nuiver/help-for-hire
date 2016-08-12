@@ -24,11 +24,11 @@
         <td><%= service.description %></td>
         <td><%= service.category %></td>
         <td><%= service.list_of_tasks %></td>
-        <td><%= service.begin_date %></td>
-        <td><%= service.end_date %></td>
+        <td><%= service.begin_date.strftime("%d %B %Y") %></td>
+        <td><%= service.end_date.strftime("%d %B %Y") %></td>
         <td><%= service.location %></td>
         <td><%= number_to_currency service.price, unit: '€ ' %></td>
-        <Td><%= service.user.email %></td>
+        <td><%= service.user.email %></td>
         <td><%= link_to 'Show', service %></td>
         <td>
           <% if can? :update, service %>
