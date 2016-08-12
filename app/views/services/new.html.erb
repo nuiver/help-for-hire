@@ -1,5 +1,11 @@
 <div class="form form-offer">
   <h1>I have a service to offer</h1>
   <%= render 'form', service: @service %>
+<br>
+<% if user_signed_in? %>
+  <%= render 'form', booking: @booking %>
+  <% else%>
+  <%="Please log in to create a new service" %>
+  <% end %>
 </div>
 <%= link_to 'Back', services_path %>
