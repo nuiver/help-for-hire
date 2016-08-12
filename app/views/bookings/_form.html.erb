@@ -26,7 +26,14 @@
     <%= f.text_field :total_price %>
   </div>
 
+<% if @service |= nil %>
+  <div class="field">
+    <%= f.hidden_field :service_id, :value => @service.id %>
+  </div>
+<% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

@@ -28,7 +28,6 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.service_id = service_id
 
     authorize! :create, @booking
 
@@ -79,6 +78,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:begin_date, :end_date, :total_price)
+      params.require(:booking).permit(:begin_date, :end_date, :total_price, :service_id)
     end
 end
