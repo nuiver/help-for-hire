@@ -23,9 +23,7 @@ body a{
   color: #065A6B;
 }
 
-body a:hover {
-  color: #07282F;
-}
+/
 
 /* typo */
 
@@ -70,7 +68,7 @@ header .container {
   font-weight: 200;
 }
 .topright a {
-  color: #ffffff;
+  color: #9BB7BC;
   text-decoration: none;
 }
 .topright li {
@@ -93,7 +91,7 @@ nav a{
   font-size: 14px;
 }
 nav a:hover {
-  color: #9BB7BC;
+  color: white;
 }
 nav a:active {
   color: #9BB7BC;
