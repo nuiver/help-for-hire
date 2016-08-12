@@ -6,7 +6,6 @@
   background-image: url(http://lifecoaching.debramay.com/wp-content/uploads/2013/08/helping-hikers.jpg);
   background-size: cover;
   -webkit-filter: grayscale(50%);
-  border-radius: 25px;
 }
 
 
@@ -18,18 +17,18 @@
 .help_me {
   flex: 1;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   color: #07282F
 }
 
 .give_help {
   flex: 1;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .welcome {
-  font-size: 40px;
+  font-size: 30px;
   padding: 60px;
   text-align: right;
 }

@@ -11,9 +11,10 @@
 #9BB7BC / light blue
 */
 
+
 body {
   background-color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Offside', cursive;
   margin: 0;
   font-size: 14px;
   font-weight: 500;
@@ -108,10 +109,6 @@ nav li {
 
 /* main content */
 
-.maincontent {
-  padding: 10px 20px;
-}
-
 /* footer */
 footer .container {
   height: 200px;
@@ -121,6 +118,7 @@ footer .container {
   padding-top: 20px;
   text-align: right;
   padding-right: 30px;
+  border-top: 10px solid #9BB7BC;
 }
  ul {
    list-style-type: none;
