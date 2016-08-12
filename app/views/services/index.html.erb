@@ -30,6 +30,7 @@
         <td><%= number_to_currency service.price, unit: '€ ' %></td>
         <td><%= service.user.email %></td>
         <td><%= link_to 'Show', service %></td>
+        <td><%= link_to 'New booking', new_booking_path(service) %>
         <td>
           <% if can? :update, service %>
             <%= link_to 'Edit', edit_service_path(service) %>
