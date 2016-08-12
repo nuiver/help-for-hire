@@ -26,6 +26,9 @@ class BookingsController < ApplicationController
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @booking.service_id = service_id
+
     authorize! :create, @booking
 
     respond_to do |format|
