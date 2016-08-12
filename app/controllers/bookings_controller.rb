@@ -16,7 +16,11 @@ class BookingsController < ApplicationController
   # GET /bookings/new
   def new
     @booking = Booking.new
-    @service = Service.find_by(id: params[:format])
+    if params[:format] == 0
+      @service = Service.find_by(id: params[:booking][:service_id])
+    else
+      @service = Service.find_by(id: params[:format])
+    end
   end
 
   # GET /bookings/1/edit
