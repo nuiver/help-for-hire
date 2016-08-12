@@ -5,11 +5,11 @@
 
 .main_help {
   display: flex;
+  margin-top: 200px;
 }
 
 .help_me {
   flex: 1;
-  
 }
 
 .give_help {
@@ -21,3 +21,6 @@
   padding: 60px;
   text-align: center;
 }
+ img {
+   width: 200px;
+ }
