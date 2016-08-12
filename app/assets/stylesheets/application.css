@@ -15,6 +15,7 @@ body {
   background-color: #D8D8D8;
   font-family: 'Raleway', sans-serif;
   margin: 0;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -50,7 +51,7 @@ header .container {
   float: left;
 }
 .topleft h1 {
-  margin-top: 30px;
+  margin-top: 45px;
   font-size: 53px;
   font-weight: 500;
 }
@@ -60,12 +61,25 @@ header .container {
   color: #9BB7BC;
   text-decoration: none;
 }
+/* topright / login */
+
 .topright {
   flex: 1;
   float: left;
   color: #9BB7BC;
-  font-style: italic;
+  font-weight: 200;
 }
+.topright a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.topright li {
+  list-style-type: none;
+}
+.login-text {
+  font-weight: 500;
+}
+
 
 /* nav */
 
@@ -76,8 +90,12 @@ nav a{
   color: #ffffff;
   font-weight: 300;
   text-decoration: none;
+  font-size: 14px;
 }
 nav a:hover {
+  color: #9BB7BC;
+}
+nav a:active {
   color: #9BB7BC;
 }
 nav ul {
