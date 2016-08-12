@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.main_page {
+  background-image: url(http://lifecoaching.debramay.com/wp-content/uploads/2013/08/helping-hikers.jpg);
+  background-size: cover;
+}
+
 
 .main_help {
   display: flex;
@@ -10,17 +15,27 @@
 
 .help_me {
   flex: 1;
+  text-align: center;
+  font-size: 30px;
+  color: #07282F
 }
 
 .give_help {
   flex: 1;
+  text-align: center;
+  font-size: 30px;
 }
 
 .welcome {
   font-size: 40px;
   padding: 60px;
-  text-align: center;
+  text-align: right;
 }
- img {
-   width: 200px;
- }
+img {
+ width: 300px;
+}
+
+.main_img {
+  width: 400px;
+  align-self: center;
+}
