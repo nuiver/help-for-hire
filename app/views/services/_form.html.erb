@@ -10,93 +10,101 @@
       </ul>
     </div>
   <% end %>
+  <div class="form_block">
+    <div class="block_left">
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Available from:" %>
-    <%= f.date_field :begin_date %>
-      <%= f.label "to:" %>
-    <%= f.date_field :end_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.text_field :price %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label "Gardening" %>
-    <%= f.collection_check_boxes :task_ids, Task.where(category: "Gardening"), :id, :name do |b| %>
-      <div class="collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
+      <!-- <%= f.label :category %>
+      <%= f.select :category, [['IT'],['Gardening'],['Cleaning'],['Carpentry'], ['Electricity'], ['Plumbing']] %> -->
+      <div class="field">
+        <%= f.label "Gardening", :class => "h_category" %>
+        <%= f.collection_check_boxes :task_ids, Task.where(category: "Gardening"), :id, :name do |b| %>
+          <div class="collection-check-box">
+            <table>
+              <tr><%= b.label %></tr>
+              <tr><%= b.check_box %></tr>
+          </table>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Electricity" %>
-    <%= f.collection_check_boxes :task_ids, Task.where(category: "Electricity"), :id, :name do |b| %>
-      <div class="collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
+      <div class="field">
+        <%= f.label "Electricity" %>
+        <%= f.collection_check_boxes :task_ids, Task.where(category: "Electricity"), :id, :name do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Cleaning" %>
-    <%= f.collection_check_boxes :task_ids, Task.where(category: "Cleaning"), :id, :name do |b| %>
-      <div class="collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
+      <div class="field">
+        <%= f.label "Cleaning" %>
+        <%= f.collection_check_boxes :task_ids, Task.where(category: "Cleaning"), :id, :name do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Carpentry" %>
-    <%= f.collection_check_boxes :task_ids, Task.where(category: "Carpentry"), :id, :name do |b| %>
-      <div class="collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
+    </div>
+    <div class="block_centre">
+      <div class="field">
+        <%= f.label "Carpentry" %>
+        <%= f.collection_check_boxes :task_ids, Task.where(category: "Carpentry"), :id, :name do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Plumbing" %>
-    <%= f.collection_check_boxes :task_ids, Task.where(category: "Plumbing"), :id, :name do |b| %>
-      <div class="collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
+      <div class="field">
+        <%= f.label "Plumbing" %>
+        <%= f.collection_check_boxes :task_ids, Task.where(category: "Plumbing"), :id, :name do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label "IT" %>
-    <%= f.collection_check_boxes :task_ids, Task.where(category: "IT"), :id, :name do |b| %>
-      <div class="collection-check-box">
-        <%= b.check_box %>
-        <%= b.label %>
+      <div class="field">
+        <%= f.label "IT" %>
+        <%= f.collection_check_boxes :task_ids, Task.where(category: "IT"), :id, :name do |b| %>
+          <div class="collection-check-box">
+            <%= b.check_box %>
+            <%= b.label %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+
+    </div>
+    <div class="block_right">
+
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= f.label "Available from:" %>
+        <%= f.date_field :begin_date %>
+          <%= f.label "to:" %>
+        <%= f.date_field :end_date %>
+      </div>
+
+      <div class="field">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
+
+      <div class="field">
+        <%= f.label :price %>
+        <%= f.text_field :price %>
+      </div>
+
+    </div>
   </div>
 
   <div class="actions">
