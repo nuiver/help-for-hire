@@ -1,13 +1,34 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Reservation</h1>
+
+<p>
+  <strong>Client:</strong>
+  <%= @booking.user.email %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @booking.service.user.email %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @booking.service.name %>
+</p>
+
 <p>
   <strong>Begin date:</strong>
-  <%= @booking.begin_date %>
+  <%= @booking.begin_date.strftime("%d %B %Y") %>
 </p>
 
 <p>
   <strong>End date:</strong>
-  <%= @booking.end_date %>
+  <%= @booking.end_date.strftime("%d %B %Y") %>
+</p>
+<p>
+  <strong>Duur:</strong>
+  <%= distance_of_time_in_words(@booking.begin_date, @booking.end_date) %>
 </p>
 
 <p>
@@ -15,7 +36,7 @@
   <%= @booking.total_price %>
 </p>
 
-<% if can? :update, @booking %>
+<!-- <% if can? :update, @booking %>
   <%= link_to 'Edit', edit_booking_path(@booking) %>
-<% end %>
+<% end %> -->
 <%= link_to 'Back', bookings_path %>
